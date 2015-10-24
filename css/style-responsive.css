@@ -1,12 +1,4 @@
-@media (min-width: 980px) {
-    /*-----*/
-    .custom-bar-chart {
-        margin-bottom: 40px;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 930px) {
 
     .mail-box .sm-side {
         width: 30%;
@@ -79,7 +71,23 @@
 
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 930px) {
+
+    #leftbar {
+        display: block;
+        width: 100%;
+    }
+    
+    #rightbar {
+        display: block;
+        width: 100%;
+    }
+
+    #centerbar {
+        display: block;
+        width: 100%;
+    }
 
     .header {
         position: absolute;
