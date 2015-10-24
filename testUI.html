@@ -657,7 +657,10 @@
                 </section>
 
             </div>
-            <div class="col-sm-4" id="rightbar"><div id="tree"></div></div>
+            <div class="col-sm-4" id="rightbar">
+                  <button id="ZoomIn">Zoom In</button>
+                  <button id="ZoomOut">Zoom Out</button>
+            <div id="tree" width="300"></div></div>
             <script src="http://d3js.org/d3.v3.min.js"></script>
         </div>
 			
@@ -687,6 +690,33 @@
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.nicescroll.js" type="text/javascript"></script>-->
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $("#ZoomIn").click(ZoomIn());
+
+        $("#ZoomOut").click(ZoomOut());
+
+        function ZoomIn () {
+
+            $("#treesvg").width(
+                $("#treesvg").width() * 1.2
+            );
+
+            $("#treesvg").height(
+                $("#treesvg").height() * 1.2
+            );
+        }
+
+        function  ZoomOut () {
+
+            $("#treesvg").width(
+                $("#treesvg").width() * 0.5
+            );
+
+            $("#treesvg").height(
+                $("#treesvg").height() * 0.5
+            );
+        }
+    </script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 
 
