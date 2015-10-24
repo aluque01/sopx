@@ -1,3 +1,46 @@
+circle{
+  fill:white;
+  stroke:blue;  
+  stroke-width:2px;
+}
+line{
+  stroke:gray;
+  stroke-width:3px;
+}
+.incRect{
+    stroke:gray;
+    shape-rendering:crispEdges;
+}
+#incMatx text{
+    text-anchor:middle;
+    cursor:default;
+}
+#treesvg g text:hover, #treesvg g circle:hover{
+    cursor:pointer;
+}
+#navdiv{
+    background:#555;
+}
+#treesvg{
+    border:1px solid gray;
+}
+#labelpos{
+    color:white;
+}
+#navdiv button, #navdiv textarea{
+    vertical-align:middle;
+}
+#g_labels text{
+    text-anchor:middle;
+}
+#g_elabels text{
+    text-anchor:middle;
+    fill:red;
+    font-weight:bold;
+}
+
+
+
 /*
 Template Name: DASHIO - Bootstrap 3.1.1 Admin Theme
 Template Version: 1.0
