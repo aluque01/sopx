@@ -3,8 +3,10 @@ return JSON.parse(localStorage["nodes"])[0].subject;
 }
 var count = 0;
 function tree(){
+
 	var svgW=958, svgH =460, vRad=35, tree={cx:300, cy:30, w:100, h:140};
 	tree.vis={v:0, l:getRoot(), p:{x:tree.cx, y:tree.cy},c:[]};	
+
 	tree.size=1;
 	tree.glabels =[];
 	tree.incMatx =[];
@@ -82,7 +84,7 @@ function tree(){
 		d3.select("#labelnav").style('visibility','visible');
 	}
 	
-	/*updateIncMatx = function(){
+	updateIncMatx = function(){
 		var n = tree.size-1;
 		tree.incMatx = d3.range(0,tree.size-1).map(function(){return 0;});
 		updateIncMatxl = function(t){
@@ -96,7 +98,7 @@ function tree(){
 	
 	getIncMatxRow = function(i){
 		return d3.range(0,tree.size-1-i).map(function(d,j){ var n=tree.size-2-i-j; return (tree.incMatx[i] & 1<<n)>>n; });
-	}*/
+	}
 	
 	tree.showLabel = function(i){
 		if(i >tree.glabels.length || i < 1){ alert('invalid label position'); return; } 
