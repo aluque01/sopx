@@ -1,5 +1,9 @@
 function getRoot() {
-return JSON.parse(localStorage["nodes"])[0].subject;
+	if (localStorage.getItem("nodes") != null) {
+		return JSON.parse(localStorage["nodes"])[0].subject;
+	} else {
+		return '?';
+	}
 }
 function tree(){
 	var svgW=958, svgH =460, vRad=35, tree={cx:300, cy:30, w:100, h:140};
