@@ -1,18 +1,10 @@
-<html>
-  <head>
 
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-    <script type="text/javascript">
+  
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
-
-
       var CLIENT_ID = '344192115536-ht99ab51jn4rcbnduqmcccg0c5i9ckd5.apps.googleusercontent.com';
 
 
-console.log("YOOO");
 
       var SCOPES = ['https://mail.google.com/'];
 
@@ -39,6 +31,7 @@ console.log("YOOO");
 	    });
 	    return uuid;
 	}	
+
 
       /**
        * Check if current user has authorized this application.
@@ -86,7 +79,6 @@ console.log("YOOO");
        * Load Gmail API client library. List labels once client library
        * is loaded.
        */
-
       function loadGmailApi() {
         gapi.client.load('gmail', 'v1', listLabels);
       }
@@ -95,7 +87,8 @@ console.log("YOOO");
        * Print all Labels in the authorized user's inbox. If no labels
        * are found an appropriate message is printed.
        */
-      function listLabels() {
+
+      function listLabels() { 
         var request = gapi.client.gmail.users.labels.list({
           'userId': 'me'
         });
@@ -141,6 +134,8 @@ console.log("YOOO");
               for (k = 0; result.payload.headers[k].name != "Subject" && result.payload.headers[j].name != undefined; k++);
               //node.subject = result.payload.headers[j].value;
               //console.log(node.subject);
+
+
 	if (index == 0) root = true;
 	else root = false;
               var node = {
@@ -282,20 +277,4 @@ console.log("YOOO");
       }*/
 
 
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
-  </head>
-  <body>
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Gmail API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
-      </button>
-    </div>
-    <pre id="output"></pre>
-  </body>
 
-t</html>
-i

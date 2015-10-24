@@ -1,7 +1,6 @@
 function getRoot() {
 return JSON.parse(localStorage["nodes"])[0].subject;
 }
-var count = 0;
 function tree(){
 	var svgW=958, svgH =460, vRad=35, tree={cx:300, cy:30, w:100, h:140};
 	tree.vis={v:0, l:getRoot(), p:{x:tree.cx, y:tree.cy},c:[]};	
@@ -32,8 +31,7 @@ function tree(){
 	
 	tree.addLeaf = function(_){
 		function addLeaf(t){
-			//TODO CHANGE count TO FILL TREE
-			if(t.v==_){ t.c.push({v:tree.size++, l:count++, p:{},c:[]}); return; }
+			if(t.v==_){ t.c.push({v:tree.size++, l:'?', p:{},c:[]}); return; }
 			t.c.forEach(addLeaf);
 		}
 		addLeaf(tree.vis);
